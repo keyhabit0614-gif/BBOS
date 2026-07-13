@@ -4,13 +4,13 @@
 
 ## Portfolio Summary
 
-- Total Assets: 57,940,090円
-- Total Gain: +22,625,152円
+- Total Assets: 57,006,382円
+- Total Gain: +21,691,444円
 - Return: +64.1%
 - Daily Change: +1,103,001円
 - Bull Score: 94 / 100
-- 1億円達成率: 57.9%
-- Buying Power: 71,974円
+- 1億円達成率: 57.0%
+- Buying Power: 88,459円
 
 ## Today’s Action
 
