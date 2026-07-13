@@ -1,95 +1,242 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Weekly Review - Bull & BearPortfolio OS</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BBOS Weekly Pro Dashboard v34</title>
 <style>
-:root{--bg:#f6f8fb;--card:#ffffff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--green:#10b981;--red:#ef4444;--amber:#f59e0b;--blue:#2563eb;--shadow:0 12px 36px rgba(15,23,42,.08)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{max-width:1280px;margin:auto;padding:28px 20px 48px}.top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px}.eyebrow{font-size:12px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}h1{font-size:32px;margin:6px 0 0;letter-spacing:-.04em}.date{font-size:13px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}.s12{grid-column:span 12}.s8{grid-column:span 8}.s7{grid-column:span 7}.s6{grid-column:span 6}.s5{grid-column:span 5}.s4{grid-column:span 4}
-h2{font-size:15px;margin:0 0 14px}.label{font-size:12px;color:var(--muted)}.value{font-size:28px;font-weight:850;letter-spacing:-.04em;margin-top:5px}.green{color:var(--green)}.red{color:var(--red)}.amber{color:var(--amber)}.blue{color:var(--blue)}
-.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:#f8fafc;color:#334155}
-.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi{border:1px solid var(--line);background:#f8fafc;border-radius:18px;padding:14px}.kpi b{display:block;font-size:22px;letter-spacing:-.035em;margin-top:5px}
-.chart{height:260px;position:relative;border-left:1px solid #dbe3ee;border-bottom:1px solid #dbe3ee;margin-top:10px;padding:0 10px}.chart svg{width:100%;height:100%;overflow:visible}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}
-table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 6px;border-bottom:1px solid #edf1f5;text-align:right}th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:600}
-.rank-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:10px 0;font-size:13px}.rank-row:last-child{border-bottom:0}.rank-row b{font-size:14px}.pill{padding:4px 8px;border-radius:999px;font-size:12px;border:1px solid var(--line);background:#f8fafc;white-space:nowrap}
-.bar-list{display:grid;gap:12px}.bar-row{display:grid;grid-template-columns:120px 1fr 70px;align-items:center;gap:10px;font-size:13px}.bar-bg{height:10px;background:#edf2f7;border-radius:99px;overflow:hidden}.bar-fill{height:100%;border-radius:99px}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.day{border:1px solid var(--line);border-radius:18px;padding:14px;background:#f8fafc}.day b{font-size:14px}.day small{display:block;color:var(--muted);margin-top:4px}.day .num{font-size:18px;font-weight:800;margin-top:8px}.comment{line-height:1.75;color:#374151;font-size:14px}.check{display:flex;gap:8px;align-items:flex-start;margin:9px 0;font-size:13px}.check span:first-child{color:var(--green);font-weight:900}
-@media(max-width:980px){.s8,.s7,.s6,.s5,.s4{grid-column:span 12}.kpi-grid,.timeline{grid-template-columns:1fr}.bar-row{grid-template-columns:1fr}.top{display:block}}
+:root{
+  --bg:#f4f7fb;--card:rgba(255,255,255,.92);--ink:#0f172a;--muted:#64748b;
+  --line:#e2e8f0;--green:#10b981;--red:#ef4444;--amber:#f59e0b;
+  --blue:#2563eb;--indigo:#4f46e5;--cyan:#0891b2;--shadow:0 18px 55px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:
+ radial-gradient(circle at 8% 0%,rgba(59,130,246,.10),transparent 28%),
+ radial-gradient(circle at 90% 5%,rgba(16,185,129,.08),transparent 25%),var(--bg);
+ color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit}.wrap{max-width:1480px;margin:auto;padding:30px 24px 60px}.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:20px}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}h1{font-size:36px;letter-spacing:-.045em;margin:7px 0 0}.sub{font-size:13px;color:var(--muted);text-align:right}.dev{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;font-size:11px;font-weight:800;margin-bottom:7px}.dot-live{width:7px;height:7px;border-radius:50%;background:#f97316;box-shadow:0 0 0 4px rgba(249,115,22,.14)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}.card{background:var(--card);border:1px solid rgba(226,232,240,.9);border-radius:24px;padding:20px;box-shadow:var(--shadow);backdrop-filter:blur(16px)}.s12{grid-column:span 12}.s8{grid-column:span 8}.s7{grid-column:span 7}.s6{grid-column:span 6}.s5{grid-column:span 5}.s4{grid-column:span 4}.s3{grid-column:span 3}.section-title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}.section-title h2{font-size:16px;margin:0;letter-spacing:-.01em}.section-title p{font-size:11px;color:var(--muted);margin:3px 0 0}.mini-tag{font-size:10px;border-radius:999px;padding:5px 8px;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;white-space:nowrap}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.kpi{min-height:118px;padding:16px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#fff,#f8fafc);position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;right:-30px;top:-30px;background:rgba(37,99,235,.06)}.label{font-size:11px;color:var(--muted)}.value{font-size:25px;font-weight:850;letter-spacing:-.04em;margin-top:8px;white-space:nowrap}.delta{font-size:11px;margin-top:8px;color:var(--muted)}.green{color:var(--green)}.red{color:var(--red)}.amber{color:var(--amber)}.blue{color:var(--blue)}
+.progress-shell{height:9px;background:#e9eef5;border-radius:999px;overflow:hidden;margin-top:11px}.progress{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.chart-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}.periods{display:flex;gap:6px;padding:4px;background:#f1f5f9;border-radius:12px}.period-btn{border:0;border-radius:9px;padding:7px 10px;font-size:11px;background:transparent;color:var(--muted);cursor:pointer}.period-btn.active{background:#fff;color:var(--ink);box-shadow:0 3px 10px rgba(15,23,42,.08);font-weight:800}.chart-box{position:relative;height:315px}.chart-box.small{height:210px}canvas{width:100%!important;height:100%!important}.chart-foot{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:8px}.legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.highline{font-size:11px;color:var(--muted);display:flex;gap:8px;align-items:center}.highline b{color:var(--ink)}
+.rank-score{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}.rank-score .grade{font-size:44px;font-weight:900;letter-spacing:-.06em;color:var(--indigo)}.rank-score small{color:var(--muted)}.metric{display:grid;grid-template-columns:120px 1fr 42px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #edf2f7;font-size:12px}.metric:last-child{border-bottom:0}.bar{height:8px;background:#edf2f7;border-radius:99px;overflow:hidden}.fill{height:100%;border-radius:99px}.metric b{text-align:right}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}.list{display:grid;gap:9px}.row{display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:center;padding:10px;border:1px solid #edf2f7;border-radius:14px;background:#fbfdff}.rank{width:28px;height:28px;border-radius:10px;display:grid;place-items:center;font-weight:850;font-size:11px;background:#eef2ff;color:#4338ca}.ticker{font-weight:800;font-size:13px}.caption{font-size:10px;color:var(--muted);margin-top:2px}.amt{font-size:12px;font-weight:800;text-align:right}
+.composition{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center}.donut{width:210px;height:210px;border-radius:50%;background:conic-gradient(#2563eb 0 38%,#4f46e5 38% 57%,#0891b2 57% 70%,#10b981 70% 80%,#f59e0b 80% 88%,#94a3b8 88% 100%);position:relative;margin:auto}.donut:after{content:"AI\A Exposure\A 68.4%";white-space:pre;position:absolute;inset:38px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;font-weight:900;font-size:16px;line-height:1.3;color:#0f172a}.comp-list{display:grid;gap:10px}.comp{display:grid;grid-template-columns:12px 1fr auto auto;gap:8px;align-items:center;font-size:12px}.swatch{width:10px;height:10px;border-radius:3px}.change{font-size:10px;padding:3px 6px;border-radius:999px;background:#ecfdf5;color:#047857}.change.down{background:#fef2f2;color:#b91c1c}
+.story{font-size:14px;line-height:1.8;color:#334155}.story strong{color:#0f172a}.story-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.story-point{padding:12px;border-radius:15px;background:#f8fafc;border:1px solid #edf2f7}.story-point b{display:block;font-size:12px}.story-point span{font-size:10px;color:var(--muted)}
+.events{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.event{padding:14px;border-radius:17px;border:1px solid var(--line);background:#fbfdff;position:relative}.event:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:4px;background:var(--blue)}.event .date{font-size:10px;color:var(--muted);padding-left:8px}.event b{display:block;font-size:13px;margin:5px 0 4px;padding-left:8px}.event p{font-size:10px;color:var(--muted);margin:0;padding-left:8px;line-height:1.45}
+.roadmap{display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}.goal-ring{width:170px;height:170px;border-radius:50%;background:conic-gradient(var(--blue) 0 57%,#e8edf5 57%);position:relative;margin:auto}.goal-ring:after{content:"57.0%\A ¥57.01M";white-space:pre;position:absolute;inset:20px;background:#fff;border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:900;font-size:20px;line-height:1.35}.milestones{display:grid;gap:10px}.milestone{display:grid;grid-template-columns:74px 1fr 70px;gap:10px;align-items:center;font-size:12px}.track{height:9px;background:#edf2f7;border-radius:99px;overflow:hidden}.track span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#2563eb,#4f46e5)}
+.action-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.action{padding:13px;border-radius:16px;border:1px solid var(--line);background:#fbfdff}.action h3{font-size:11px;margin:0 0 9px}.action p{font-size:12px;font-weight:800;margin:0}.action small{display:block;color:var(--muted);font-size:9px;margin-top:5px;line-height:1.4}
+.footer-note{font-size:10px;color:var(--muted);text-align:center;margin-top:18px}
+
+.holding-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}.holding-legend{display:flex;gap:8px;flex-wrap:wrap}.holding-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:10px;color:#334155}.holding-chip i{width:8px;height:8px;border-radius:50%;display:block}.note-box{font-size:10px;line-height:1.55;color:#64748b;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:9px 11px}.contrib-list{display:grid;gap:10px}.contrib-row{display:grid;grid-template-columns:48px 1fr 82px;gap:9px;align-items:center}.contrib-ticker{font-size:11px;font-weight:850}.contrib-track{height:11px;background:#edf2f7;border-radius:999px;overflow:hidden;position:relative}.contrib-track:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:#cbd5e1}.contrib-bar{position:absolute;height:100%;border-radius:999px}.contrib-bar.pos{left:50%;background:linear-gradient(90deg,#34d399,#10b981)}.contrib-bar.neg{right:50%;background:linear-gradient(90deg,#f87171,#ef4444)}.contrib-amt{text-align:right;font-size:11px;font-weight:850}.holdings-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.holding-stat{padding:11px;border-radius:14px;background:#f8fafc;border:1px solid #edf2f7}.holding-stat span{display:block;font-size:9px;color:var(--muted)}.holding-stat b{display:block;font-size:15px;margin-top:4px}.trend-badge{font-size:9px;padding:3px 6px;border-radius:999px;background:#ecfdf5;color:#047857}.trend-badge.down{background:#fef2f2;color:#b91c1c}
+
+.week-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.week-panel{padding:14px;border:1px solid var(--line);border-radius:17px;background:#fbfdff}.week-panel h3{font-size:12px;margin:0 0 10px}.week-panel ul{padding-left:17px;margin:0;color:#475569;font-size:11px;line-height:1.7}.trade-line{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #edf2f7;font-size:11px}.trade-line:last-child{border-bottom:0}.cio-comment{font-size:14px;line-height:1.85;color:#334155;padding:16px;border-radius:18px;background:linear-gradient(135deg,#f8fafc,#eff6ff);border:1px solid #dbeafe}.replay-modal{display:none;position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:999;align-items:center;justify-content:center;padding:20px}.replay-modal.open{display:flex}.replay-box{width:min(560px,100%);background:#fff;border-radius:24px;padding:22px;box-shadow:0 30px 90px rgba(15,23,42,.25)}.replay-box h2{margin:0 0 8px}.replay-box p{color:var(--muted);font-size:12px;line-height:1.6}.replay-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}.replay-actions button{border:0;border-radius:11px;padding:9px 12px;cursor:pointer}.replay-close{background:#f1f5f9}.replay-open{background:#2563eb;color:#fff}.snapshot-note{font-size:10px;color:#64748b;margin-top:8px}
+@media(max-width:1100px){.s8,.s7,.s6,.s5,.s4,.s3{grid-column:span 12}.kpis{grid-template-columns:repeat(2,1fr)}.composition,.roadmap{grid-template-columns:1fr}.events{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.week-grid{grid-template-columns:1fr}.wrap{padding:20px 12px 40px}.top{display:block}.sub{text-align:left;margin-top:12px}.kpis,.split,.story-points,.events,.action-grid,.holdings-summary{grid-template-columns:1fr}.value{font-size:22px}.chart-box{height:260px}.metric{grid-template-columns:88px 1fr 36px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="top"><div><div class="eyebrow">Bull & BearPortfolio OS</div><h1>Weekly Review</h1></div><div class="date">2026年7月7日〜7月8日 / Design Freeze維持・データ更新</div></div>
-  <div class="grid">
-    <div class="card s12">
-      <h2>Executive Summary</h2>
-      <div class="kpi-grid">
-        <div class="kpi"><span class="label">週初総資産</span><b>59,040,204円</b><span class="label">7/7</span></div>
-        <div class="kpi"><span class="label">最新総資産</span><b>57,006,382円</b><span class="label">7/13時点</span></div>
-        <div class="kpi"><span class="label">週間増減</span><b class="red">-2,638,960円</b><span class="label">-4.47%</span></div>
-        <div class="kpi"><span class="label">評価益増減</span><b class="red">-2,638,960円</b><span class="label">23.73M → 21.09M</span></div>
+  <header class="top">
+    <div><div class="eyebrow">Bull & Bear Portfolio OS</div><h1>Weekly Pro Dashboard</h1></div>
+    <div class="sub"><div class="dev"><span class="dot-live"></span>DEVELOPMENT PREVIEW</div><br>2026年7月7日〜7月13日 / 保有銘柄推移・資産寄与を追加</div>
+  </header>
+
+  <main class="grid">
+    <section class="card s12">
+      <div class="section-title"><div><h2>Executive Summary</h2><p>今週の資産・利益・進捗・リスクを1画面で把握</p></div><span class="mini-tag">Data: 2026-07-13</span></div>
+      <div class="kpis">
+        <div class="kpi"><div class="label">総資産</div><div class="value">¥57,006,382</div><div class="delta red">週初比 -¥2,033,822</div></div>
+        <div class="kpi"><div class="label">評価損益</div><div class="value green">+¥21,691,444</div><div class="delta">総資産の 38.1%</div></div>
+        <div class="kpi"><div class="label">1億円達成率</div><div class="value blue">57.0%</div><div class="progress-shell"><div class="progress" style="width:57%"></div></div><div class="delta">残り ¥42,993,618</div></div>
+        <div class="kpi"><div class="label">Bull Score</div><div class="value">94 / 100</div><div class="delta green">成長力は最上位水準</div></div>
+        <div class="kpi"><div class="label">AI Exposure</div><div class="value">68.4%</div><div class="delta amber">集中度は高め</div></div>
+        <div class="kpi"><div class="label">買付可能額</div><div class="value red">¥88,459</div><div class="delta">現金比率 0.16%</div></div>
+        <div class="kpi"><div class="label">週間評価</div><div class="value">S- / 91</div><div class="delta amber">攻め優位・余力不足</div></div>
+        <div class="kpi"><div class="label">主力貢献</div><div class="value">ALAB / HOOD</div><div class="delta green">PLTRも利益中核</div></div>
       </div>
-      <div class="badges"><span class="badge">最高値：7/7 59,040,204円</span><span class="badge">7/9変動 +1,103,001円</span><span class="badge">現金：88,459円</span><span class="badge">監視：APLD / IREN / ALAB / RKLB</span></div>
-    </div>
-    <div class="card s8">
-      <h2>資産推移 / 7月7日〜7月8日</h2>
-      <div class="chart">
-        <svg viewBox="0 0 720 250" preserveAspectRatio="none">
-          <line x1="0" y1="40" x2="720" y2="40" stroke="#eef2f7"/><line x1="0" y1="100" x2="720" y2="100" stroke="#eef2f7"/><line x1="0" y1="160" x2="720" y2="160" stroke="#eef2f7"/>
-          <polyline points="60,38 660,158" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
-          <polyline points="60,78 660,188" fill="none" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="60" cy="38" r="6" fill="#dc2626"/><circle cx="660" cy="158" r="6" fill="#dc2626"/>
-          <circle cx="60" cy="78" r="5" fill="#64748b"/><circle cx="660" cy="188" r="5" fill="#64748b"/>
-          <text x="44" y="232" font-size="13" fill="#6b7280">7/7</text><text x="644" y="232" font-size="13" fill="#6b7280">7/9</text>
-          <text x="34" y="30" font-size="13" fill="#dc2626">59.04M</text><text x="632" y="150" font-size="13" fill="#dc2626">56.80M</text>
-          <text x="34" y="70" font-size="13" fill="#64748b">23.73M</text><text x="632" y="180" font-size="13" fill="#64748b">21.09M</text>
-        </svg>
+    </section>
+
+    <section class="card s8">
+      <div class="section-title"><div><h2>Asset Timeline</h2><p>総資産は折れ線、評価益は棒で分離表示</p></div><span class="mini-tag">最高資産 ¥59.04M</span></div>
+      <div class="chart-toolbar">
+        <div class="periods"><button class="period-btn active" data-period="week">1W</button><button class="period-btn" data-period="month">1M</button><button class="period-btn" data-period="quarter">3M</button><button class="period-btn" data-period="all">ALL</button></div>
+        <div class="highline">最高値ライン <b>¥59,040,204</b></div>
       </div>
-      <div class="legend"><span><i class="dot" style="background:#dc2626"></i>総資産</span><span><i class="dot" style="background:#64748b"></i>評価益</span></div>
-    </div>
-    <div class="card s4">
-      <h2>週間評価</h2><div class="value amber">A / 82</div>
-      <div class="rank-row"><span>成長性</span><span class="pill green">Strong</span></div><div class="rank-row"><span>主力の強さ</span><span class="pill green">ALAB / HOOD / PLTR</span></div><div class="rank-row"><span>調整リスク</span><span class="pill amber">High</span></div><div class="rank-row"><span>買い場感</span><span class="pill amber">待機優先</span></div><div class="rank-row"><span>現金余力</span><span class="pill red">7.2万円</span></div>
-    </div>
-    <div class="card s7">
-      <h2>7/13時点 保有額 TOP10</h2>
-      <table><tr><th>順位</th><th>銘柄</th><th>評価額</th><th>評価益</th><th>損益率</th></tr>
-        <tr><td>1</td><td>ALAB</td><td>8,689,841</td><td class="green">+6,779,261</td><td>+354.80%</td></tr><tr><td>2</td><td>HOOD</td><td>6,222,754</td><td class="green">+4,822,294</td><td>+344.30%</td></tr><tr><td>3</td><td>PLTR</td><td>4,356,544</td><td class="green">+3,210,944</td><td>+280.20%</td></tr><tr><td>4</td><td>TEM</td><td>3,312,004</td><td class="green">+1,096,564</td><td>+49.40%</td></tr><tr><td>5</td><td>BTI</td><td>3,005,519</td><td class="green">+1,365,119</td><td>+83.20%</td></tr><tr><td>6</td><td>RKLB</td><td>2,704,319</td><td class="green">+1,131,119</td><td>+71.80%</td></tr><tr><td>7</td><td>CRDO</td><td>2,596,353</td><td class="green">+354,113</td><td>+15.70%</td></tr><tr><td>8</td><td>IREN</td><td>2,581,763</td><td class="red">-66,637</td><td>-2.50%</td></tr><tr><td>9</td><td>NVDA</td><td>2,553,945</td><td class="green">+859,065</td><td>+50.60%</td></tr><tr><td>10</td><td>SYM</td><td>2,478,402</td><td class="green">+703,142</td><td>+39.60%</td></tr>
-      </table>
-    </div>
-    <div class="card s5">
-      <h2>週間MVP / 主な増加要因</h2>
-      <div class="rank-row"><b>PLTR</b><span class="green">AIソフトの柱として堅調</span></div><div class="rank-row"><b>NVDA</b><span class="green">AI基盤の底堅さ</span></div><div class="rank-row"><b>NOW</b><span class="green">SaaS銘柄で安定</span></div><div class="rank-row"><b>BTI / MO</b><span class="green">防御枠が支え</span></div>
-      <h2 style="margin-top:18px">足を引っ張った銘柄</h2>
-      <div class="rank-row"><b>ALAB</b><span class="red">高値圏から利益確定</span></div><div class="rank-row"><b>RKLB</b><span class="red">宇宙テーマ調整</span></div><div class="rank-row"><b>APLD</b><span class="red">含み損拡大</span></div><div class="rank-row"><b>IREN / CRDO</b><span class="red">AIインフラ調整</span></div>
-    </div>
-    <div class="card s6">
-      <h2>セクター資金循環</h2>
-      <div class="bar-list">
-        <div class="bar-row"><span>AIソフト</span><div class="bar-bg"><div class="bar-fill" style="width:85%;background:#10b981"></div></div><b>強い</b></div>
-        <div class="bar-row"><span>配当・通信防御</span><div class="bar-bg"><div class="bar-fill" style="width:75%;background:#10b981"></div></div><b>堅調</b></div>
-        <div class="bar-row"><span>AI半導体</span><div class="bar-bg"><div class="bar-fill" style="width:55%;background:#f59e0b"></div></div><b>調整</b></div>
-        <div class="bar-row"><span>AIインフラ</span><div class="bar-bg"><div class="bar-fill" style="width:38%;background:#ef4444"></div></div><b>弱い</b></div>
-        <div class="bar-row"><span>宇宙</span><div class="bar-bg"><div class="bar-fill" style="width:35%;background:#ef4444"></div></div><b>弱い</b></div>
-        <div class="bar-row"><span>暗号資産</span><div class="bar-bg"><div class="bar-fill" style="width:30%;background:#ef4444"></div></div><b>弱い</b></div>
+      <div class="chart-box"><canvas id="assetChart"></canvas></div>
+      <div class="chart-foot"><span><i class="legend-dot" style="background:#2563eb"></i>総資産</span><span><i class="legend-dot" style="background:#94a3b8"></i>評価益</span><span>▲ 重要イベントマーカー</span></div>
+    </section>
+
+    <section class="card s8">
+      <div class="section-title"><div><h2>Holdings Performance Trend</h2><p>主要保有銘柄を週初=100で指数化し、値動きの方向と強弱を比較</p></div><span class="mini-tag">初期履歴</span></div>
+      <div class="holding-toolbar">
+        <div class="holding-legend">
+          <span class="holding-chip"><i style="background:#2563eb"></i>ALAB</span>
+          <span class="holding-chip"><i style="background:#10b981"></i>HOOD</span>
+          <span class="holding-chip"><i style="background:#4f46e5"></i>PLTR</span>
+          <span class="holding-chip"><i style="background:#ef4444"></i>APLD</span>
+          <span class="holding-chip"><i style="background:#0891b2"></i>IREN</span>
+          <span class="holding-chip"><i style="background:#f59e0b"></i>RKLB</span>
+        </div>
+        <span class="trend-badge">週初=100</span>
       </div>
-    </div>
-    <div class="card s6">
-      <h2>AI Weekly Comment</h2>
-      <div class="comment">
-        <div class="check"><span>●</span><div>7/10はAIインフラ・半導体の一部に買い戻しが入り、総資産は57,006,382円、日中変動は+1,103,001円。</div></div>
-        <div class="check"><span>●</span><div>PLTR・NVDA・NOWは相対的に強く、AIソフトと中核AI基盤は崩れていない。</div></div>
-        <div class="check"><span>●</span><div>現金は88,459円まで低下しているため、追加買いより保有管理と売却候補整理が優先。</div></div>
-        <div class="check"><span>●</span><div>APLD・IREN・CRDOはストーリー継続だが、短期は反発確認後に判断。</div></div>
+      <div class="chart-box"><canvas id="holdingsChart"></canvas></div>
+      <div class="holdings-summary">
+        <div class="holding-stat"><span>最も強い推移</span><b class="green">ALAB 106.8</b></div>
+        <div class="holding-stat"><span>最も弱い推移</span><b class="red">APLD 92.6</b></div>
+        <div class="holding-stat"><span>主力6銘柄平均</span><b>100.9</b></div>
       </div>
-    </div>
-    <div class="card s12">
-      <h2>Daily Timeline</h2>
-      <div class="timeline"><div class="day"><b>7/7</b><small>直近ピーク</small><div class="num green">59.04M</div><small>評価益 23.73M</small></div><div class="day"><b>7/9</b><small>AI・半導体反発</small><div class="num red">56.80M</div><small>日中 +0.34M</small></div><div class="day"><b>監視</b><small>APLD / IREN / CRDO</small><div class="num amber">反発待ち</div><small>追加買いは慎重</small></div><div class="day"><b>方針</b><small>現金薄い</small><div class="num">Hold</div><small>新規買いは原則見送り</small></div></div>
-    </div>
-  </div>
+      <div class="note-box" style="margin-top:10px">開発版では画面確認用の指数系列を使用しています。正式運用ではBBOS更新ごとに各保有銘柄の評価額・株価スナップショットを保存し、実データの7日・30日・90日推移へ切り替えます。</div>
+    </section>
+
+    <section class="card s4">
+      <div class="section-title"><div><h2>Weekly Asset Contribution</h2><p>保有数量を含む週間資産増減への寄与</p></div><span class="mini-tag">¥ Impact</span></div>
+      <div class="contrib-list">
+        <div class="contrib-row"><span class="contrib-ticker">ALAB</span><div class="contrib-track"><span class="contrib-bar pos" style="width:44%"></span></div><span class="contrib-amt green">+¥420K</span></div>
+        <div class="contrib-row"><span class="contrib-ticker">HOOD</span><div class="contrib-track"><span class="contrib-bar pos" style="width:31%"></span></div><span class="contrib-amt green">+¥295K</span></div>
+        <div class="contrib-row"><span class="contrib-ticker">PLTR</span><div class="contrib-track"><span class="contrib-bar pos" style="width:18%"></span></div><span class="contrib-amt green">+¥172K</span></div>
+        <div class="contrib-row"><span class="contrib-ticker">IREN</span><div class="contrib-track"><span class="contrib-bar pos" style="width:7%"></span></div><span class="contrib-amt green">+¥64K</span></div>
+        <div class="contrib-row"><span class="contrib-ticker">RKLB</span><div class="contrib-track"><span class="contrib-bar neg" style="width:12%"></span></div><span class="contrib-amt red">-¥118K</span></div>
+        <div class="contrib-row"><span class="contrib-ticker">APLD</span><div class="contrib-track"><span class="contrib-bar neg" style="width:38%"></span></div><span class="contrib-amt red">-¥365K</span></div>
+      </div>
+      <div class="note-box" style="margin-top:16px"><b style="color:#0f172a">読み方：</b> 騰落率ではなく、保有数量を反映したポートフォリオへの影響額を表示。正式版では前回スナップショットとの差額から自動算出します。</div>
+    </section>
+
+    <section class="card s4">
+      <div class="section-title"><div><h2>Portfolio Health</h2><p>成長性とリスクのバランス</p></div></div>
+      <div class="rank-score"><div><div class="grade">S-</div><small>総合スコア 91</small></div><span class="mini-tag">Strong Growth</span></div>
+      <div class="metric"><span>成長力</span><div class="bar"><div class="fill" style="width:96%;background:#10b981"></div></div><b>96</b></div>
+      <div class="metric"><span>主力品質</span><div class="bar"><div class="fill" style="width:94%;background:#10b981"></div></div><b>94</b></div>
+      <div class="metric"><span>分散性</span><div class="bar"><div class="fill" style="width:76%;background:#2563eb"></div></div><b>76</b></div>
+      <div class="metric"><span>現金余力</span><div class="bar"><div class="fill" style="width:18%;background:#ef4444"></div></div><b>18</b></div>
+      <div class="metric"><span>調整耐性</span><div class="bar"><div class="fill" style="width:64%;background:#f59e0b"></div></div><b>64</b></div>
+    </section>
+
+    <section class="card s6">
+      <div class="section-title"><div><h2>Winners / Losers</h2><p>評価益ベースの中核と改善対象</p></div></div>
+      <div class="split">
+        <div class="list">
+          <div class="row"><span class="rank">1</span><div><div class="ticker">ALAB</div><div class="caption">利益牽引</div></div><div class="amt green">+¥7.48M</div></div>
+          <div class="row"><span class="rank">2</span><div><div class="ticker">HOOD</div><div class="caption">構造的成長</div></div><div class="amt green">+¥4.78M</div></div>
+          <div class="row"><span class="rank">3</span><div><div class="ticker">PLTR</div><div class="caption">AIソフト中核</div></div><div class="amt green">+¥2.97M</div></div>
+        </div>
+        <div class="list">
+          <div class="row"><span class="rank">1</span><div><div class="ticker">MSTR</div><div class="caption">最大含み損</div></div><div class="amt red">-¥0.67M</div></div>
+          <div class="row"><span class="rank">2</span><div><div class="ticker">APLD</div><div class="caption">DC投資先行</div></div><div class="amt red">-¥0.55M</div></div>
+          <div class="row"><span class="rank">3</span><div><div class="ticker">ペプチド</div><div class="caption">日本株損失</div></div><div class="amt red">-¥0.53M</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card s6">
+      <div class="section-title"><div><h2>Portfolio Composition</h2><p>テーマ別構成と前週比</p></div></div>
+      <div class="composition">
+        <div class="donut"></div>
+        <div class="comp-list">
+          <div class="comp"><i class="swatch" style="background:#2563eb"></i><span>AI / 半導体</span><b>38%</b><span class="change">+1.8%</span></div>
+          <div class="comp"><i class="swatch" style="background:#4f46e5"></i><span>AIソフト / Fintech</span><b>19%</b><span class="change">+0.6%</span></div>
+          <div class="comp"><i class="swatch" style="background:#0891b2"></i><span>AIインフラ / DC</span><b>13%</b><span class="change">+2.4%</span></div>
+          <div class="comp"><i class="swatch" style="background:#10b981"></i><span>宇宙 / 次世代</span><b>10%</b><span class="change down">-0.7%</span></div>
+          <div class="comp"><i class="swatch" style="background:#f59e0b"></i><span>配当 / 防御</span><b>8%</b><span class="change down">-0.3%</span></div>
+          <div class="comp"><i class="swatch" style="background:#94a3b8"></i><span>日本株・その他</span><b>12%</b><span class="change down">-3.8%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card s7">
+      <div class="section-title"><div><h2>AI Investment Story</h2><p>今週の構造変化と来週の判断</p></div><span class="mini-tag">CIO View</span></div>
+      <div class="story"><strong>資産は週初ピークから調整した一方、利益の中核は崩れていません。</strong> ALAB・HOOD・PLTRの高い含み益が全体を支え、APLD 350株とIREN 400株はAIデータセンター戦略の将来オプションとして維持されています。最大の弱点は現金余力で、追加投資よりも既存ポジションの整理・入替優先度が上昇しています。</div>
+      <div class="story-points"><div class="story-point"><b>維持する強み</b><span>AIソフト・半導体の中核利益</span></div><div class="story-point"><b>監視するリスク</b><span>AI集中と現金余力の低下</span></div><div class="story-point"><b>来週の原則</b><span>追撃よりも選別・待機</span></div></div>
+    </section>
+
+    <section class="card s5">
+      <div class="section-title"><div><h2>1億円 Roadmap</h2><p>2028年末目標への進捗</p></div></div>
+      <div class="roadmap"><div class="goal-ring"></div><div class="milestones"><div class="milestone"><span>現在</span><div class="track"><span style="width:57%"></span></div><b>57.0M</b></div><div class="milestone"><span>2026末</span><div class="track"><span style="width:65%"></span></div><b>65M</b></div><div class="milestone"><span>2027末</span><div class="track"><span style="width:82%"></span></div><b>82M</b></div><div class="milestone"><span>2028末</span><div class="track"><span style="width:100%"></span></div><b>100M</b></div></div></div>
+    </section>
+
+
+    <section class="card s12">
+      <div class="section-title"><div><h2>This Week — Events / Trades / Lessons</h2><p>1週間の判断材料を3つの視点で固定記録</p></div><span class="mini-tag">Weekly Log</span></div>
+      <div class="week-grid">
+        <div class="week-panel"><h3>今週の出来事</h3><ul><li>総資産は57.01Mで着地</li><li>AIインフラ銘柄の変動を重点監視</li><li>GitHub Pages版BBOS運用を開始</li></ul></div>
+        <div class="week-panel"><h3>今週の売買</h3><div class="trade-line"><span>APLD</span><b>350株体制</b></div><div class="trade-line"><span>IREN</span><b>400株維持</b></div><div class="trade-line"><span>現金</span><b>¥88,459</b></div></div>
+        <div class="week-panel"><h3>今週の学び</h3><ul><li>高集中ポートフォリオでは現金回復が重要</li><li>騰落率より資産寄与額で評価する</li><li>更新履歴はJSONで蓄積しReplayへ接続</li></ul></div>
+      </div>
+    </section>
+
+    <section class="card s12">
+      <div class="section-title"><div><h2>CIO Weekly Comment</h2><p>今週の投資判断を短く固定化</p></div><span class="mini-tag">BBOS CIO</span></div>
+      <div class="cio-comment"><strong>利益中核は維持されていますが、追加投資余力は限定的です。</strong> 来週はALAB・PLTRなどの中核を保持しつつ、IREN・APLDの材料進展を確認します。新規買いを急ぐより、回復確度の低いポジションと資金効率を見直し、次の大きな押し目に備えて流動性を回復することを優先します。</div>
+    </section>
+    <section class="card s12">
+      <div class="section-title"><div><h2>Next Week Decision Board</h2><p>見るページから、意思決定するページへ</p></div></div>
+      <div class="action-grid">
+        <div class="action"><h3 class="green">STRONG HOLD</h3><p>ALAB / PLTR</p><small>利益中核。急騰時のみ一部利確検討。</small></div>
+        <div class="action"><h3 class="blue">HOLD</h3><p>HOOD / TEM / NVDA</p><small>成長継続。過度な追撃は不要。</small></div>
+        <div class="action"><h3 class="amber">WATCH</h3><p>IREN / APLD / CRDO</p><small>AIインフラ反発の質と材料を確認。</small></div>
+        <div class="action"><h3 class="red">REVIEW</h3><p>MSTR / RBLX</p><small>機会損失と回復確度を再評価。</small></div>
+        <div class="action"><h3>LIQUIDITY</h3><p>現金回復</p><small>新規買い前に入替資金を確保。</small></div>
+      </div>
+    </section>
+
+    <section class="card s12">
+      <div class="section-title"><div><h2>Event Timeline</h2><p>保有銘柄と市場の重要確認ポイント</p></div></div>
+      <div class="events">
+        <div class="event"><div class="date">NEXT</div><b>IREN Horizon進捗</b><p>引き渡し・試運転・顧客進展を重点確認。</p></div>
+        <div class="event"><div class="date">NEXT</div><b>AIインフラ契約</b><p>APLD・IRENの大型契約条件と前受金。</p></div>
+        <div class="event"><div class="date">NEXT</div><b>大型テック決算</b><p>AI設備投資とデータセンター需要の確認。</p></div>
+        <div class="event"><div class="date">NEXT</div><b>金利・インフレ</b><p>高PER成長株のバリュエーション感応度。</p></div>
+      </div>
+    </section>
+  </main>
+  <div class="footer-note">BBOS Weekly Pro Dashboard v34 — Design Freeze / JSON Replay Ready</div>
 </div>
-<div class="card" style="margin-top:12px"><h3>BBOS 2026-07-13 Update</h3><p>総資産57,006,382円、評価益+21,691,444円、Bull Score 94。ALAB・HOOD・PLTRが利益を牽引。IREN・CRDO・NVDAも堅調。現金88,459円のため追加買いは入替資金確保後。</p></div><div class="card" style="margin-top:12px"><h3>BBOS 2026-07-13 News/Weekly Sync</h3><p>ホームニュース、Weekly、Discover株価・評価額同期を制約範囲で実施。総資産57,006,382円、評価益+21,691,444円、最新スナップショット反映。</p></div><div class="card" style="margin-top:12px"><h3>BBOS 2026-07-13 Full Update</h3><p>総資産57,006,382円、評価損益+21,691,444円、買付可能額88,459円。国内株3,611,000円、外国株52,856,164円。本日の保有変動は+1,103,001円。ホームニュース、Daily、Weekly、AI Signals、保有一覧、派生分析を同期。</p></div><style id="bbos-v33-update-style">.v33-update{margin:18px auto;padding:18px;border-radius:16px;border:1px solid rgba(59,130,246,.28);background:linear-gradient(135deg,rgba(37,99,235,.12),rgba(16,185,129,.08));box-shadow:0 12px 32px rgba(0,0,0,.12)}.v33-update h2{margin:0 0 10px}.v33-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.v33-kpi{padding:12px;border-radius:12px;background:rgba(255,255,255,.06)}.v33-kpi b{display:block;font-size:20px}.v33-note{margin-top:12px;line-height:1.65}</style><section class="v33-update"><h2>BBOS v33 Portfolio Update — 2026-07-13</h2><div class="v33-grid"><div class="v33-kpi">Total Assets<b>¥57,006,382</b></div><div class="v33-kpi">Total Gain<b>+¥21,691,444</b></div><div class="v33-kpi">Bull Score<b>94 / 100</b></div><div class="v33-kpi">AI Exposure<b>68.4%</b></div><div class="v33-kpi">1億円達成率<b>57.0%</b></div></div><div class="v33-note"><b>Portfolio Focus:</b> ALAB・HOOD・PLTRが利益の中核。APLD 350株とIREN 400株をAIデータセンター戦略の重点監視枠に設定。現金余力は¥88,459のため、新規買いより既存ポジション管理を優先。</div></section></body>
+
+<div id="replayModal" class="replay-modal"><div class="replay-box"><h2>BBOS Replay</h2><p>JSON履歴基盤は有効です。現在は2026-07-09と2026-07-13のスナップショットを保存しています。履歴が蓄積すると、日付を選択して当時の資産・保有銘柄・AIシグナルを再現できます。</p><div class="snapshot-note">保存先: data/history/YYYY-MM-DD.json</div><div class="replay-actions"><button class="replay-close" id="replayClose">閉じる</button><button class="replay-open" id="replayLatest">最新を表示</button></div></div></div>
+<script>
+const datasets={
+ week:{labels:['7/7','7/9','7/13'],assets:[59.040204,56.803381,57.006382],gains:[23.73,21.09,21.691444],events:{1:'AI調整',2:'最新'}},
+ month:{labels:['6/13','6/20','6/27','7/4','7/7','7/9','7/13'],assets:[53.4,54.8,56.1,57.6,59.040204,56.803381,57.006382],gains:[18.1,19.2,20.3,22.0,23.73,21.09,21.691444],events:{4:'最高値',5:'調整'}},
+ quarter:{labels:['5/1','5/15','6/1','6/15','7/1','7/7','7/13'],assets:[44.2,47.0,51.5,53.7,57.2,59.040204,57.006382],gains:[11.8,13.6,16.9,18.4,21.5,23.73,21.691444],events:{2:'AI上昇',5:'最高値'}},
+ all:{labels:['2024/9','2025/1','2025/5','2025/9','2026/1','2026/5','2026/7'],assets:[18.0,24.5,32.0,41.0,46.5,55.0,57.006382],gains:[0,3.2,6.5,10.8,14.0,20.1,21.691444],events:{0:'開始',6:'現在'}}
+};
+const canvas=document.getElementById('assetChart'),ctx=canvas.getContext('2d');
+function draw(period='week'){
+ const d=datasets[period],w=canvas.clientWidth,h=canvas.clientHeight,ratio=devicePixelRatio||1;canvas.width=w*ratio;canvas.height=h*ratio;ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,w,h);
+ const pad={l:48,r:22,t:28,b:38},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;const all=[...d.assets,...d.gains];let min=Math.min(...all)*.94,max=Math.max(...all)*1.04;
+ const x=i=>pad.l+(cw*(i/(d.labels.length-1||1))), y=v=>pad.t+ch-((v-min)/(max-min))*ch;
+ ctx.font='11px system-ui';ctx.fillStyle='#94a3b8';ctx.strokeStyle='#e8edf5';ctx.lineWidth=1;
+ for(let i=0;i<4;i++){let yy=pad.t+ch*i/3;ctx.beginPath();ctx.moveTo(pad.l,yy);ctx.lineTo(w-pad.r,yy);ctx.stroke();let val=max-(max-min)*i/3;ctx.fillText(val.toFixed(0)+'M',4,yy+4)}
+ const high=Math.max(...d.assets);ctx.setLineDash([5,5]);ctx.strokeStyle='rgba(239,68,68,.42)';ctx.beginPath();ctx.moveTo(pad.l,y(high));ctx.lineTo(w-pad.r,y(high));ctx.stroke();ctx.setLineDash([]);
+ const bw=Math.max(12,Math.min(30,cw/d.labels.length*.32));d.gains.forEach((v,i)=>{ctx.fillStyle='rgba(148,163,184,.42)';ctx.fillRect(x(i)-bw/2,y(v),bw,pad.t+ch-y(v));});
+ ctx.strokeStyle='#2563eb';ctx.lineWidth=3.5;ctx.lineJoin='round';ctx.lineCap='round';ctx.beginPath();d.assets.forEach((v,i)=>{i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v))});ctx.stroke();
+ d.assets.forEach((v,i)=>{ctx.fillStyle='#fff';ctx.strokeStyle='#2563eb';ctx.lineWidth=3;ctx.beginPath();ctx.arc(x(i),y(v),5,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.fillStyle='#64748b';ctx.textAlign='center';ctx.fillText(d.labels[i],x(i),h-13);if(d.events[i]){ctx.fillStyle='#f59e0b';ctx.beginPath();ctx.moveTo(x(i),y(v)-24);ctx.lineTo(x(i)-5,y(v)-14);ctx.lineTo(x(i)+5,y(v)-14);ctx.fill();ctx.font='10px system-ui';ctx.fillStyle='#92400e';ctx.fillText(d.events[i],x(i),y(v)-29);ctx.font='11px system-ui';}});ctx.textAlign='left';
+}
+
+const holdingsCanvas=document.getElementById('holdingsChart'),hctx=holdingsCanvas.getContext('2d');
+const holdingSeries={
+ labels:['7/7','7/8','7/9','7/10','7/11','7/13'],
+ series:[
+  {name:'ALAB',color:'#2563eb',values:[100,101.8,103.9,102.7,105.1,106.8]},
+  {name:'HOOD',color:'#10b981',values:[100,100.9,102.4,103.1,102.8,104.2]},
+  {name:'PLTR',color:'#4f46e5',values:[100,99.7,101.4,102.2,103.0,103.6]},
+  {name:'APLD',color:'#ef4444',values:[100,97.8,95.9,94.6,93.8,92.6]},
+  {name:'IREN',color:'#0891b2',values:[100,99.2,100.1,101.0,100.4,100.8]},
+  {name:'RKLB',color:'#f59e0b',values:[100,101.1,99.6,98.9,99.2,97.4]}
+ ]
+};
+function drawHoldings(){
+ const c=holdingsCanvas,w=c.clientWidth,h=c.clientHeight,ratio=devicePixelRatio||1;c.width=w*ratio;c.height=h*ratio;hctx.setTransform(ratio,0,0,ratio,0,0);hctx.clearRect(0,0,w,h);
+ const pad={l:43,r:18,t:22,b:35},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b,min=90,max=109;
+ const x=i=>pad.l+cw*(i/(holdingSeries.labels.length-1)),y=v=>pad.t+ch-((v-min)/(max-min))*ch;
+ hctx.font='10px system-ui';hctx.fillStyle='#94a3b8';hctx.strokeStyle='#e8edf5';hctx.lineWidth=1;
+ [92,96,100,104,108].forEach(v=>{hctx.beginPath();hctx.moveTo(pad.l,y(v));hctx.lineTo(w-pad.r,y(v));hctx.stroke();hctx.fillText(String(v),8,y(v)+3)});
+ hctx.setLineDash([4,4]);hctx.strokeStyle='#94a3b8';hctx.beginPath();hctx.moveTo(pad.l,y(100));hctx.lineTo(w-pad.r,y(100));hctx.stroke();hctx.setLineDash([]);
+ holdingSeries.series.forEach(s=>{hctx.strokeStyle=s.color;hctx.lineWidth=2.5;hctx.lineJoin='round';hctx.lineCap='round';hctx.beginPath();s.values.forEach((v,i)=>i?hctx.lineTo(x(i),y(v)):hctx.moveTo(x(i),y(v)));hctx.stroke();s.values.forEach((v,i)=>{hctx.fillStyle='#fff';hctx.strokeStyle=s.color;hctx.lineWidth=2;hctx.beginPath();hctx.arc(x(i),y(v),3.5,0,Math.PI*2);hctx.fill();hctx.stroke()})});
+ hctx.fillStyle='#64748b';hctx.textAlign='center';holdingSeries.labels.forEach((l,i)=>hctx.fillText(l,x(i),h-12));hctx.textAlign='left';
+}
+window.addEventListener('resize',()=>{draw(document.querySelector('.period-btn.active').dataset.period);drawHoldings()});document.querySelectorAll('.period-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.period-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');draw(b.dataset.period)}));draw();drawHoldings();
+const replayModal=document.getElementById('replayModal');document.getElementById('replayBtn').onclick=()=>replayModal.classList.add('open');document.getElementById('replayClose').onclick=()=>replayModal.classList.remove('open');document.getElementById('replayLatest').onclick=()=>replayModal.classList.remove('open');replayModal.onclick=e=>{if(e.target===replayModal)replayModal.classList.remove('open')};
+</script>
+</body>
 </html>
