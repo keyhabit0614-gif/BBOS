@@ -9,8 +9,8 @@
 | Total Assets | 57,940,090円 |
 | Total Gain | +22,625,152円 |
 | Return | +64.1% |
-| Bull Score | 95 / 100 |
-| AI Exposure | 67.9% |
+| Bull Score | 94 / 100 |
+| AI Exposure | 68.4% |
 | 1億円達成率 | 57.9% |
 | 買付余力 | 71,974円 |
 

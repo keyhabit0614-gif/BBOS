@@ -1,4 +1,4 @@
-# BBOS v32 Update Report — 2026-07-10
+# BBOS v32 Update Report — 2026-07-13
 
 - Homeニュースを7/10版へ更新
 - 総資産・評価損益・買付可能額を更新
