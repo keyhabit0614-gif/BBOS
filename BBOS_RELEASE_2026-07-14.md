@@ -1,7 +1,10 @@
-# BBOS v34 Official Release — 2026-07-14
+# BBOS v34 Release — 2026-07-14
 
-- Daily data updated to 2026-07-14
-- Weekly v34 Pro Dashboard applied to linked weekly.html
-- Weekly Executive Summary, asset/profit figures, Winners/Losers, Portfolio Health and commentary synchronized
-- Replay snapshot for 2026-07-14 included
-- Design Freeze preserved
+- Home: updated
+- Daily / Daily alias: updated and synchronized
+- Weekly / Weekly alias: updated and synchronized
+- Portfolio KPIs: 54,492,132円 / +19,161,781円 / 88,402円
+- News: refreshed for 2026-07-14
+- AI Signals / Discover / derived pages: included
+- Replay JSON: 2026-07-09, 2026-07-13, 2026-07-14
+- Design Freeze: maintained

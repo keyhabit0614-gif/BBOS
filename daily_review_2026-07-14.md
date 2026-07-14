@@ -1,24 +1,27 @@
 # Portfolio Terminal Light Pro
 
-## 2026-07-14 Daily Review
+## 2026年7月14日 Daily Review
 
 ### Portfolio Summary
-- Total Assets: **¥54,492,132**
-- Total Gain: **+¥19,161,781**
-- Return: **約+54.2%**
-- Bull Score: **95 / 100**
-- AI Exposure: **97 / 100**
+- Total Assets: **54,492,132円**
+- Total Gain: **+19,161,781円**
+- Return: **+54.2%**
+- Bull Score: **94 / 100**
+- AI Exposure: **68.4%**
 - 1億円達成率: **54.5%**
-- Buying Power: **¥88,402**
+- Buying Power: **88,402円**
 
-### Executive Summary
-ALAB・HOOD・PLTRが利益の中核を維持。IREN・APLDはAIデータセンターの重点監視枠。買付余力が少ないため、新規買いより既存ポジション管理を優先。
+### Portfolio Leaders
+ALAB・HOOD・PLTRが評価益を牽引。IREN・APLDはAIデータセンター戦略の重点監視枠。
 
 ### Today's Action
-- Strong Buy（押し目）: IREN / APLD
-- Buy: CRDO / RKLB / OKLO
+- Strong Buy: なし（買付余力が限定的）
+- Buy Watch: IREN / APLD / CRDO / RKLB / OKLO
 - Hold: ALAB / HOOD / PLTR / NVDA / TEM / SYM / MRVL / NOW / TSLA / IONQ
-- Sell候補: MSTR / RBLX / ペプチドリーム
+- Reduce Watch: MSTR / RBLX / ペプチドリーム
 
 ### Risk
-APLD、MSTR、RBLX、ペプチドリームの含み損を監視。AIインフラ比率が高いため、金利・設備投資・契約進捗による変動に注意。
+高成長株への集中度と現金余力の低さに注意。新規購入より、保有継続・入替候補の選別を優先。
+
+### Event Calendar
+IREN・APLDのAIデータセンター案件、AI半導体・ネットワーク関連決算、金利・インフレ指標を監視。
