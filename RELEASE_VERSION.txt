@@ -1,0 +1,4 @@
+BBOS v35 Market Intelligence V8.1.1 FULL PUBLIC RELEASE
+Date: 2026-07-14
+Design baseline: V8
+Mobile optimization: enabled
