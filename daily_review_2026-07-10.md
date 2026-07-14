@@ -1,16 +1,16 @@
 # Portfolio Terminal Light Pro
 
-2026-07-13
+2026-07-14
 
 ## Portfolio Summary
 
-- Total Assets: 57,006,382円
-- Total Gain: +21,691,444円
+- Total Assets: 54,492,132円
+- Total Gain: +19,161,781円
 - Return: +64.1%
 - Daily Change: +1,103,001円
 - Bull Score: 94 / 100
-- 1億円達成率: 57.0%
-- Buying Power: 88,459円
+- 1億円達成率: 54.5%
+- Buying Power: 88,402円
 
 ## Today’s Action
 
