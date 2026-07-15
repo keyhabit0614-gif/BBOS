@@ -8,7 +8,7 @@
 - Total Gain: +21,691,444円
 - Return: +64.1%
 - Daily Change: +1,103,001円
-- Bull Score: 94 / 100
+- Bull Score: 95 / 100
 - 1億円達成率: 57.0%
 - Buying Power: 88,459円
 

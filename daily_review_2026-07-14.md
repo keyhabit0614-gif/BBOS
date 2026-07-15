@@ -1,15 +1,15 @@
 # Portfolio Terminal Light Pro
 
-## 2026年7月14日 Daily Review
+## 2026年7月15日 Daily Review
 
 ### Portfolio Summary
-- Total Assets: **54,492,132円**
-- Total Gain: **+19,161,781円**
+- Total Assets: **55,499,789円**
+- Total Gain: **+20,169,423円**
 - Return: **+54.2%**
-- Bull Score: **94 / 100**
-- AI Exposure: **68.4%**
-- 1億円達成率: **54.5%**
-- Buying Power: **88,402円**
+- Bull Score: **95 / 100**
+- AI Exposure: **70.2%**
+- 1億円達成率: **55.5%**
+- Buying Power: **88,346円**
 
 ### Portfolio Leaders
 ALAB・HOOD・PLTRが評価益を牽引。IREN・APLDはAIデータセンター戦略の重点監視枠。

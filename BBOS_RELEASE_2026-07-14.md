@@ -1,10 +1,10 @@
-# BBOS v34 Release — 2026-07-14
+# BBOS v34 Release — 2026-07-15
 
 - Home: updated
 - Daily / Daily alias: updated and synchronized
 - Weekly / Weekly alias: updated and synchronized
-- Portfolio KPIs: 54,492,132円 / +19,161,781円 / 88,402円
-- News: refreshed for 2026-07-14
+- Portfolio KPIs: 55,499,789円 / +20,169,423円 / 88,346円
+- News: refreshed for 2026-07-15
 - AI Signals / Discover / derived pages: included
-- Replay JSON: 2026-07-09, 2026-07-13, 2026-07-14
+- Replay JSON: 2026-07-09, 2026-07-13, 2026-07-15
 - Design Freeze: maintained

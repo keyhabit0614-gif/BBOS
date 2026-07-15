@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-13",
+  "date": "2026-07-09",
   "total_assets": 57006382,
   "total_gain": 21691444,
   "cash": 88459,
@@ -9,7 +9,7 @@
   "foreign_gain": 21067244,
   "day_change": 340160,
   "bull_score": 95,
-  "ai_exposure": "68.4%",
+  "ai_exposure": "70.2%",
   "holdings": [
     {
       "ticker": "ALAB",

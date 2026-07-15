@@ -7,14 +7,14 @@
 - Total Assets: **¥57,006,382**
 - Total Gain: **+¥21,691,444**
 - Return: **+61.4%**
-- Bull Score: **94 / 100**
-- AI Exposure: **68.4%**
+- Bull Score: **95 / 100**
+- AI Exposure: **70.2%**
 - 1億円達成率: **57.0%**
 - Cash: **¥88,459**
 
 ## Portfolio Treemap
 
-主力は ALAB、HOOD、PLTR。AIインフラ・AIソフト・Fintechが利益を牽引。APLD 350株とIREN 400株はAIデータセンター戦略の重点監視ポジション。
+主力は ALAB、HOOD、PLTR。AIインフラ・AIソフト・Fintechが利益を牽引。APLD 450株とIREN 400株はAIデータセンター戦略の重点監視ポジション。
 
 ## Today's Action
 

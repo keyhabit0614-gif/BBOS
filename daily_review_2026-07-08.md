@@ -9,8 +9,8 @@
 | Total Assets | 57,006,382円 |
 | Total Gain | +21,691,444円 |
 | Return | +64.1% |
-| Bull Score | 94 / 100 |
-| AI Exposure | 68.4% |
+| Bull Score | 95 / 100 |
+| AI Exposure | 70.2% |
 | 1億円達成率 | 57.0% |
 | 買付余力 | 88,459円 |
 
@@ -34,7 +34,7 @@ APLD、AAOI、SOFI
 
 ## Watch List
 
-APLDは350株維持。30ドル前後だけでなく、反発確認と顧客・契約ニュースを重視。IRENはAIクラウド契約進展、CRDOはAI光通信需要、ALABは高値圏の過熱を監視。
+APLDは450株維持。30ドル前後だけでなく、反発確認と顧客・契約ニュースを重視。IRENはAIクラウド契約進展、CRDOはAI光通信需要、ALABは高値圏の過熱を監視。
 
 ## Risk
 
