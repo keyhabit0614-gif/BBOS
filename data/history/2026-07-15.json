@@ -11,7 +11,6 @@
   "bull_score": 95,
   "ai_exposure": "70.2%",
   "goal_progress": "55.5%",
-  "usd_jpy": 162.31,
   "holdings": [
     {
       "ticker": "ALAB",
@@ -105,7 +104,7 @@
     },
     {
       "ticker": "APLD",
-      "name": "アプライド・デジタル",
+      "name": "アプライド デジタル",
       "theme": "AIデータセンター",
       "quantity": 450,
       "value_jpy": 2080587,
@@ -177,7 +176,7 @@
     },
     {
       "ticker": "AAOI",
-      "name": "アプライド・オプトエレクトロニクス",
+      "name": "アプライド オプトエレクトロニクス",
       "theme": "光通信",
       "quantity": 30,
       "value_jpy": 611192,
@@ -279,7 +278,7 @@
       "name": "ペプチドリーム",
       "theme": "日本株",
       "quantity": 300,
-      "value_jpy": 299790,
+      "value_jpy": 299700,
       "gain_jpy": -534810,
       "return_pct": "-64.00%"
     }
