@@ -1,9 +1,13 @@
 {
-  "version": "v35.1.2",
-  "date": "2026-07-15",
+  "version": "v36",
+  "date": "2026-07-17",
   "files": 164,
   "source": "Nomura screenshots",
   "design_freeze": true,
   "replay_json": true,
-  "latest_snapshot": "2026-07-15"
+  "latest_snapshot": "data/history/2026-07-17.json",
+  "release_date": "2026-07-17",
+  "total_assets": 51949708,
+  "total_gain": 16619342,
+  "bull_score": 72
 }

@@ -1,0 +1,5 @@
+files=168
+history17=True
+manifest_latest=2026-07-17
+foreign_sum=48306292
+domestic_sum=3555070

@@ -1,13 +1,13 @@
 # Portfolio Terminal Light Pro
 
-## 2026年7月15日 Daily Review
+## 2026年7月17日 Daily Review
 
-- Total Assets: **55,499,789円**
-- Total Gain: **+20,169,423円**
+- Total Assets: **51,949,708円**
+- Total Gain: **+16,619,342円**
 - Return: **+57.1%**
-- Bull Score: **95 / 100**
-- AI Exposure: **70.2%**
-- 1億円達成率: **55.5%**
+- Bull Score: **72 / 100**
+- AI Exposure: **69.0%**
+- 1億円達成率: **51.9%**
 - Cash: **88,346円**
 
 ## Portfolio Summary

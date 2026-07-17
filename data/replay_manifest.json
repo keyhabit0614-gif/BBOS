@@ -2,12 +2,15 @@
   "version": "v35",
   "replay": true,
   "storage": "json",
-  "latest": "2026-07-15",
+  "latest": "2026-07-17",
   "snapshots": [
     "2026-07-09",
     "2026-07-13",
     "2026-07-14",
-    "2026-07-15"
+    "2026-07-17"
   ],
-  "weekly_design_freeze": true
+  "weekly_design_freeze": true,
+  "dates": [
+    "2026-07-17"
+  ]
 }

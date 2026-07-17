@@ -1,0 +1,286 @@
+{
+  "date": "2026-07-17",
+  "total_assets": 51949708,
+  "total_gain": 16619342,
+  "cash": 88346,
+  "domestic_equity": 3555070,
+  "domestic_gain": 568270,
+  "foreign_equity": 48306292,
+  "foreign_gain": 16051072,
+  "day_change": -2529025,
+  "bull_score": 72,
+  "ai_exposure": "69.0%",
+  "goal_progress": "51.9%",
+  "holdings": [
+    {
+      "ticker": "ALAB",
+      "name": "アステラ",
+      "theme": "AIインフラ",
+      "quantity": 140,
+      "value_jpy": 7268713,
+      "gain_jpy": 5358133,
+      "return_pct": "+280.40%"
+    },
+    {
+      "ticker": "HOOD",
+      "name": "ロビンフッド",
+      "theme": "Fintech",
+      "quantity": 340,
+      "value_jpy": 5853279,
+      "gain_jpy": 4452819,
+      "return_pct": "+317.90%"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "パランティア",
+      "theme": "AIソフト",
+      "quantity": 200,
+      "value_jpy": 4366073,
+      "gain_jpy": 3220473,
+      "return_pct": "+281.10%"
+    },
+    {
+      "ticker": "BTI",
+      "name": "ブリティッシュアメリカン",
+      "theme": "配当",
+      "quantity": 300,
+      "value_jpy": 3076776,
+      "gain_jpy": 1436376,
+      "return_pct": "+87.50%"
+    },
+    {
+      "ticker": "TEM",
+      "name": "テンパスAI",
+      "theme": "AIヘルスケア",
+      "quantity": 340,
+      "value_jpy": 2958661,
+      "gain_jpy": 743221,
+      "return_pct": "+33.50%"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "エヌビディア",
+      "theme": "AI半導体",
+      "quantity": 80,
+      "value_jpy": 2694208,
+      "gain_jpy": 999328,
+      "return_pct": "+58.90%"
+    },
+    {
+      "ticker": "SYM",
+      "name": "シンボティック",
+      "theme": "自動化",
+      "quantity": 370,
+      "value_jpy": 2522183,
+      "gain_jpy": 746923,
+      "return_pct": "+42.00%"
+    },
+    {
+      "ticker": "RKLB",
+      "name": "ロケットラボ",
+      "theme": "宇宙",
+      "quantity": 250,
+      "value_jpy": 2734072,
+      "gain_jpy": 725422,
+      "return_pct": "+36.10%"
+    },
+    {
+      "ticker": "IREN",
+      "name": "アイレン",
+      "theme": "AIデータセンター",
+      "quantity": 400,
+      "value_jpy": 2262278,
+      "gain_jpy": -386122,
+      "return_pct": "-14.50%"
+    },
+    {
+      "ticker": "CRDO",
+      "name": "クレド テクノロジー",
+      "theme": "光通信",
+      "quantity": 65,
+      "value_jpy": 2195060,
+      "gain_jpy": -47180,
+      "return_pct": "-2.10%"
+    },
+    {
+      "ticker": "APLD",
+      "name": "アプライド デジタル",
+      "theme": "AIデータセンター",
+      "quantity": 450,
+      "value_jpy": 1931997,
+      "gain_jpy": -849903,
+      "return_pct": "-30.50%"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "テスラ",
+      "theme": "EV/AI",
+      "quantity": 25,
+      "value_jpy": 1587508,
+      "gain_jpy": 279108,
+      "return_pct": "+21.30%"
+    },
+    {
+      "ticker": "RBRK",
+      "name": "ルーブリック",
+      "theme": "データ管理",
+      "quantity": 120,
+      "value_jpy": 1555340,
+      "gain_jpy": 63380,
+      "return_pct": "+4.20%"
+    },
+    {
+      "ticker": "RDDT",
+      "name": "レディット",
+      "theme": "SNS/AI",
+      "quantity": 50,
+      "value_jpy": 1504125,
+      "gain_jpy": 359025,
+      "return_pct": "+31.30%"
+    },
+    {
+      "ticker": "MO",
+      "name": "アルトリア",
+      "theme": "配当",
+      "quantity": 100,
+      "value_jpy": 1185861,
+      "gain_jpy": 421261,
+      "return_pct": "+55.00%"
+    },
+    {
+      "ticker": "NOW",
+      "name": "サービスナウ",
+      "theme": "SaaS",
+      "quantity": 40,
+      "value_jpy": 675565,
+      "gain_jpy": 104565,
+      "return_pct": "+18.30%"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "マーベル",
+      "theme": "半導体",
+      "quantity": 20,
+      "value_jpy": 611523,
+      "gain_jpy": -22597,
+      "return_pct": "-3.50%"
+    },
+    {
+      "ticker": "IONQ",
+      "name": "イオンキュー",
+      "theme": "量子",
+      "quantity": 100,
+      "value_jpy": 569953,
+      "gain_jpy": 81353,
+      "return_pct": "+16.60%"
+    },
+    {
+      "ticker": "SOFI",
+      "name": "ソーファイ",
+      "theme": "Fintech",
+      "quantity": 200,
+      "value_jpy": 562484,
+      "gain_jpy": -136516,
+      "return_pct": "-19.50%"
+    },
+    {
+      "ticker": "AAOI",
+      "name": "アプライド オプトエレクトロニクス",
+      "theme": "光通信",
+      "quantity": 30,
+      "value_jpy": 488309,
+      "gain_jpy": -276751,
+      "return_pct": "-36.10%"
+    },
+    {
+      "ticker": "MSTR",
+      "name": "ストラテジー",
+      "theme": "BTC",
+      "quantity": 30,
+      "value_jpy": 458057,
+      "gain_jpy": -674563,
+      "return_pct": "-59.50%"
+    },
+    {
+      "ticker": "RBLX",
+      "name": "ロブロックス",
+      "theme": "ゲーム",
+      "quantity": 50,
+      "value_jpy": 438507,
+      "gain_jpy": -470193,
+      "return_pct": "-51.70%"
+    },
+    {
+      "ticker": "VZ",
+      "name": "ベライゾン",
+      "theme": "通信",
+      "quantity": 50,
+      "value_jpy": 356261,
+      "gain_jpy": 47311,
+      "return_pct": "+15.30%"
+    },
+    {
+      "ticker": "OKLO",
+      "name": "オクロ",
+      "theme": "原子力",
+      "quantity": 40,
+      "value_jpy": 270849,
+      "gain_jpy": -52471,
+      "return_pct": "-16.20%"
+    },
+    {
+      "ticker": "ASTS",
+      "name": "ASTスペースモバイル",
+      "theme": "宇宙",
+      "quantity": 20,
+      "value_jpy": 178650,
+      "gain_jpy": -71330,
+      "return_pct": "-28.50%"
+    },
+    {
+      "ticker": "8002",
+      "name": "丸紅",
+      "theme": "日本株",
+      "quantity": 200,
+      "value_jpy": 997600,
+      "gain_jpy": 484600,
+      "return_pct": "+94.40%"
+    },
+    {
+      "ticker": "5105",
+      "name": "TOYOTIRE",
+      "theme": "日本株",
+      "quantity": 200,
+      "value_jpy": 800000,
+      "gain_jpy": 382600,
+      "return_pct": "+91.60%"
+    },
+    {
+      "ticker": "186A",
+      "name": "アストロスケール",
+      "theme": "日本株",
+      "quantity": 800,
+      "value_jpy": 784800,
+      "gain_jpy": 8800,
+      "return_pct": "+1.10%"
+    },
+    {
+      "ticker": "1605",
+      "name": "INPEX",
+      "theme": "日本株",
+      "quantity": 200,
+      "value_jpy": 680200,
+      "gain_jpy": 234400,
+      "return_pct": "+52.50%"
+    },
+    {
+      "ticker": "4587",
+      "name": "ペプチドリーム",
+      "theme": "日本株",
+      "quantity": 300,
+      "value_jpy": 292470,
+      "gain_jpy": -542130,
+      "return_pct": "-64.90%"
+    }
+  ]
+}
